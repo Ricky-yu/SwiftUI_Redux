@@ -13,6 +13,7 @@ struct AppState {
 
 enum Action {
     case increment
+    case decrease
 }
 
 class Reducer {
@@ -21,6 +22,8 @@ class Reducer {
         switch action {
         case .increment:
             appState.counter += 1
+        case .decrease:
+            appState.counter -= 1
         }
     }
 }

@@ -21,6 +21,9 @@ struct ContentView: View {
                     store.dispatch(.increment)
                 }
                 
+                Button("Decrease") {
+                    store.dispatch(.decrease)
+                }
             }
             
         }
