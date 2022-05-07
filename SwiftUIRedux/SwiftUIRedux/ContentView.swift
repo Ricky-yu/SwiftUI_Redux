@@ -15,6 +15,7 @@ struct ContentView: View {
         VStack {
             Text("\(store.appState.counter)")
                 .padding()
+            InputForm()
             Button("Plus") {
                 store.dispatch(.increment)
             }
