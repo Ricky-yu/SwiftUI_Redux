@@ -8,14 +8,27 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @EnvironmentObject var store: Store
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            Text("\(store.appState.counter)")
+                .padding()
+            Button("Plus") {
+                store.dispatch(.increment)
+            }
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        
+        let appState = AppState()
+        let reducer = Reducer()
+        let store = Store(appState: appState, reducer: reducer)
+        
+        ContentView().environmentObject(store)
     }
 }
