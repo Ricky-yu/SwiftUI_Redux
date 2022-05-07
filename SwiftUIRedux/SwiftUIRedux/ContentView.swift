@@ -20,7 +20,9 @@ struct ContentView: View {
                 Button("Increase") {
                     store.dispatch(.increment)
                 }
-                
+                Button("Reset") {
+                    store.dispatch(.reset)
+                }
                 Button("Decrease") {
                     store.dispatch(.decrease)
                 }
