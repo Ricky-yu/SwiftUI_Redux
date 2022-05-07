@@ -1,0 +1,6 @@
+framework module Pods_SwiftUIRedux {
+  umbrella header "Pods-SwiftUIRedux-umbrella.h"
+
+  export *
+  module * { export * }
+}
