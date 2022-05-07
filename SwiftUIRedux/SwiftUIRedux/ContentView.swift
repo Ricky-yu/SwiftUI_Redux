@@ -16,9 +16,13 @@ struct ContentView: View {
             Text("\(store.appState.counter)")
                 .padding()
             InputForm()
-            Button("Plus") {
-                store.dispatch(.increment)
+            HStack {
+                Button("Increase") {
+                    store.dispatch(.increment)
+                }
+                
             }
+            
         }
     }
 }
